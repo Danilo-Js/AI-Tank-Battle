@@ -26,18 +26,21 @@
 %%% Faça seu codigo a partir daqui, sendo necessario sempre ter o predicado:
 %%%% obter_controles([X,Y,ANGLE,S1,S2,S3,S4,S5,S6,SCORE], [FORWARD, REVERSE, LEFT, RIGHT, BOOM]) :- ...
 
-troca(0, 1).
-troca(1, 0).
 % [FORWARD, REVERSE, LEFT, RIGHT, BOOM]
-obter_controles([X,Y,ANGLE,S1,S2,S3,S4,S5,S6,SCORE], [FORWARD, REVERSE, LEFT, RIGHT, BOOM]) :-
-    random_between(0,1,AA),
-    troca(AA, BB),
-    random_between(0,1,CC),
-    FORWARD is AA,
-    REVERSE is BB,
-    LEFT is AA,
-    RIGHT is BB,
-    BOOM is CC.
+obter_controles([X, Y, ANGLE, S1, S2, S3, S4, S5, S6, SCORE], [FORWARD, REVERSE, LEFT, RIGHT, BOOM]) :-
+    % vai pra trás se houver presença em todos os lados
+    (S1 > 0, S2 > 0, S4 > 0, S5 > 0 -> 
+        REVERSE is 1, FORWARD is 0, LEFT is 0, RIGHT is 0
+    ; % Caso contrário
+        % Se não houver presença no centro, avança
+        (S3 < 0.7 -> FORWARD is 1; FORWARD is 0),
+        % Vai pro lado que tem mais presença detectada
+        (S1 + S2 > S4 + S5 -> LEFT is 1, RIGHT is 0; LEFT is 0, RIGHT is 1),
+        REVERSE is 0
+    ),
+    % Decidir se deve atirar com base no sensor frontal
+    (S3 > 0.2 -> BOOM is 1; BOOM is 0).  % Atira se algo for detectado pelo sensor frontal
+  
 
 % Para evitar erros, o tanque para:
 obter_controles(_, [0,0,0,0,0]).

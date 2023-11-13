@@ -24,6 +24,7 @@
     []).
 
 :- http_handler(root(.), http_reply_from_files('.', []), [prefix]).
+% :- http_handler(root(.), http_reply_from_files('/Users/meumacbook/Desktop/Projetos/AI-Tank-Battle', []), [prefix]).
 
 :- json_object
     controles(forward:integer, reverse: integer, left:integer, right:integer, boom:integer).
