@@ -34,9 +34,11 @@ The Prolog Tank Battle Project reimagines a traditional tank game by incorporati
 Before starting, ensure you have SWI-Prolog installed on your system. This is crucial for running the Prolog-based agent within the tank battle simulation.
 
 Step 1: *Install SWI-Prolog*
+
 You can download SWI-Prolog from their official website. Follow the instructions relevant to your operating system.
 
 Step 2: *Configure the Project*
+
 After installing SWI-Prolog, you'll need to set up the project.
 
 [main.js]('main.js'): This file controls the general settings of the game. You can configure aspects like the number of tanks, their speed, and other game parameters.
@@ -44,12 +46,15 @@ After installing SWI-Prolog, you'll need to set up the project.
 [servidor.pl](./servidor.pl): This file sets up the Prolog server. You'll need to ensure it is correctly configured to communicate with the game environment.
 
 Step 3: *Edit the Agent*
+
 To modify the agent's behavior, edit the [tanque0.pl](./tanque0.pl) file. This is where the decision-making logic of the tank agent is defined. Here's the core code of the agent:
 
 Step 4: *Host the agent*
+
 Run ```swipl -s servidor.pl``` at your terminal and watch the agent works by opening http://localhost:{YOUR_PORT} in your browser
 
 *Additional Documentation*
+
 Please note that the code and additional project documentation are available in Portuguese. For more detailed information, refer to [LEIA-ME.html](./LEIA-ME.html) and [Documentacao.md](/Documentacao.md).
 
 ## License
