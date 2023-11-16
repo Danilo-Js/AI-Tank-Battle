@@ -17,7 +17,6 @@
 - [Authors](#authors)
 - [About the Project](#about-the-project)
 - [Installation, Execution and Contribuition](#installation-execution-and-contribuition)
-- [License](#license)
 
 ## Introduction
 
@@ -61,8 +60,5 @@ Run ```swipl -s servidor.pl``` at your terminal and watch the agent works by ope
 *Additional Documentation*
 
 Please note that the code and additional project documentation are available in Portuguese. For more detailed information, refer to [LEIA-ME.html](./LEIA-ME.html) and [Documentacao.md](/Documentacao.md).
-
-## License
-This project is under the MIT license. See the [LICENSE](https://github.com/Danilo-Js/AI-Tank-Battle/blob/master/LICENSE) for more information.
 
 ---
