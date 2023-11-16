@@ -14,14 +14,19 @@
 - [Prolog Tank Battle Project](#prolog-tank-battle-project)
 - [Menu](#menu)
 - [Introduction](#introduction)
+- [Authors](#authors)
 - [About the Project](#about-the-project)
 - [Installation, Execution and Contribuition](#installation-execution-and-contribuition)
 - [License](#license)
-- [Authors](#authors)
 
 ## Introduction
 
 The Prolog Tank Battle Project is an interactive application exploring artificial intelligence concepts within a simulated tank combat environment. 
+
+## Authors
+This project is an extension of the [jeiks/batalha_tanques](https://github.com/jeiks/batalha_tanques) repository.
+
+It is an academic work presented by Danilo José Lima de Oliveira to the course of Artificial Intelligence, taught by Professor Jacson Rodrigues Correia da Silva, as a partial requirement of the Computer Science course for Project 01 in the second semester of 2023.
 
 ## About the Project
 
@@ -59,8 +64,5 @@ Please note that the code and additional project documentation are available in 
 
 ## License
 This project is under the MIT license. See the [LICENSE](https://github.com/Danilo-Js/AI-Tank-Battle/blob/master/LICENSE) for more information.
-
-## Authors
-This project is an academic work presented by Danilo José Lima de Oliveira to the course of Artificial Intelligence, taught by Professor Jacson Rodrigues Correia da Silva, as a partial requirement of the Computer Science course for Project 01 in the second semester of 2023.
 
 ---
