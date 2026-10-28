@@ -1,64 +1,55 @@
-<div align="center">
+![Batalha de tanques em Prolog](docs/assets/capa.svg)
 
+# Batalha de tanques em Prolog
 
-## Prolog Tank Battle Project
+Extensão acadêmica de uma simulação de batalha de tanques. O interesse está na relação entre sensores, regras de decisão e ações de agentes dentro de um ambiente visual.
 
+**Inteligência Artificial · UFES · 2023/2**
 
-<img src="screenshot-all.png">
+SWI-Prolog · JavaScript · HTML · CSS
 
-</div>
+[English](README.en.md) · [Meu percurso em Ciência da Computação](https://github.com/Danilo-Js/My-Computer-Science-Course)
 
----
+<p align="center"><img src="screenshot-all.png" alt="Demonstração original de Batalha de tanques em Prolog" width="780" /></p>
 
-## Menu
-- [Prolog Tank Battle Project](#prolog-tank-battle-project)
-- [Menu](#menu)
-- [Introduction](#introduction)
-- [Authors](#authors)
-- [About the Project](#about-the-project)
-- [Installation, Execution and Contribuition](#installation-execution-and-contribuition)
+## O que este projeto explora
 
-## Introduction
+- Percepção do ambiente por sensores e estado do agente.
+- Regras em Prolog para selecionar controles de movimento e combate.
+- Comunicação entre servidor Prolog e simulação no navegador.
 
-The Prolog Tank Battle Project is an interactive application exploring artificial intelligence concepts within a simulated tank combat environment. 
+## Como explorar
 
-## Authors
-This project is an extension of the [jeiks/batalha_tanques](https://github.com/jeiks/batalha_tanques) repository.
+| Caminho | Conteúdo |
+|---|---|
+| [Servidor HTTP e troca de dados](servidor.pl) | `servidor.pl` |
+| [Controle de agentes](controle_tanques.pl) | `controle_tanques.pl` |
+| [Regras do tanque](tanque0.pl) | `tanque0.pl` |
+| [Configuração da simulação](main.js) | `main.js` |
+| [Documentação técnica original](Documentacao.md) | `Documentacao.md` |
 
-It is an academic work presented by Danilo José Lima de Oliveira to the course of Artificial Intelligence, taught by Professor Jacson Rodrigues Correia da Silva, as a partial requirement of the Computer Science course for Project 01 in the second semester of 2023.
+## Executar ou consultar
 
-## About the Project
+Instale SWI-Prolog e inicie o servidor a partir da raiz:
 
-The Prolog Tank Battle Project reimagines a traditional tank game by incorporating advanced Prolog programming to create intelligent, autonomous agents. These agents, equipped with virtual sensors, are capable of perceiving their environment and making strategic decisions. This project not only enhances the gameplay experience but also serves as a practical application of artificial intelligence principles. By integrating sensor data with Prolog's logical decision-making capabilities, each tank agent can navigate the battlefield, identify opponents, and tactically engage in combat, demonstrating a significant leap from basic pre-programmed behaviors to dynamic, adaptive strategies.
+```bash
+swipl -s servidor.pl
+```
 
-<p align="center"><img src="screenshot-sensors.png" width="600" height="400"></p>
+O arquivo inicia um servidor na porta 8080. Abra `index.html` conforme a configuração do navegador/ambiente local e confira os endereços usados pelo JavaScript. Execute as simulações Prolog deste acervo separadamente, pois usam a mesma porta.
 
-## Installation, Execution and Contribuition
+## Conceitos e contexto
 
-Before starting, ensure you have SWI-Prolog installed on your system. This is crucial for running the Prolog-based agent within the tank battle simulation.
+As imagens registram execuções demonstrativas. Pontuações e resultados de simulação não são apresentados como benchmark reproduzido ou desempenho comercial.
 
-Step 1: *Install SWI-Prolog*
+## Autoria e procedência
 
-You can download SWI-Prolog from their official website. Follow the instructions relevant to your operating system.
+Trabalho apresentado por Danilo José Lima de Oliveira à disciplina de Inteligência Artificial, ministrada por Jacson Rodrigues Correia da Silva. Extensão de [jeiks/batalha_tanques](https://github.com/jeiks/batalha_tanques); os créditos e a procedência da base fazem parte deste projeto.
 
-Step 2: *Configure the Project*
+## Condições de uso
 
-After installing SWI-Prolog, you'll need to set up the project.
+Este acervo não contém um arquivo LICENSE na raiz. Preserve os créditos de origem e confira as condições dos materiais antes de reutilizá-los.
 
-[main.js]('main.js'): This file controls the general settings of the game. You can configure aspects like the number of tanks, their speed, and other game parameters.
+## Projetos relacionados
 
-[servidor.pl](./servidor.pl): This file sets up the Prolog server. You'll need to ensure it is correctly configured to communicate with the game environment.
-
-Step 3: *Edit the Agent*
-
-To modify the agent's behavior, edit the [tanque0.pl](./tanque0.pl) file. This is where the decision-making logic of the tank agent is defined. Here's the core code of the agent:
-
-Step 4: *Host the agent*
-
-Run ```swipl -s servidor.pl``` at your terminal and watch the agent works by opening http://localhost:{YOUR_PORT} in your browser
-
-*Additional Documentation*
-
-Please note that the code and additional project documentation are available in Portuguese. For more detailed information, refer to [LEIA-ME.html](./LEIA-ME.html) and [Documentacao.md](/Documentacao.md).
-
----
+- [prolog-car-race](https://github.com/Danilo-Js/prolog-car-race)
